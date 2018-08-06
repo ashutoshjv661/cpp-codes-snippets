@@ -1,10 +1,9 @@
-/*******************************************
+﻿/*******************************************
  * Ashutosh Jadhav 
  * @ashutoshjv661
  * Follow me on instagram/facebook/twitter 
- * youtube : Ashutosh Jadhav Vlogs and UrIndianCoder 
  *                
-               {´◕ ◡ ◕｀}
+             {´◕ ◡ ◕｀}
  *******************************************/
 
 #include<bits/stdc++.h>
