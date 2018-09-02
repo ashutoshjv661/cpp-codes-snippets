@@ -10,11 +10,13 @@ int prime(int x)
             return 0;
     }
     return 1;
+    
 }
 int main()
 {
+   // freopen("input.txt","r",stdin);
+   // freopen("output.txt","w",stdout);
     int i,t,low,high;
-    
     cin>>t;
     while(t>0){
     cin>>low;
@@ -25,6 +27,7 @@ int main()
                     cout<<i<<" ";
                 }
             }
+
         }
         t--;
     }
