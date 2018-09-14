@@ -1,4 +1,4 @@
-﻿/*******************************************
+﻿﻿/*******************************************
  * @ashutoshjv661
  * Follow me on instagram/facebook/twitter  
              {´◕ ◡ ◕｀}
@@ -10,17 +10,17 @@ using namespace std;
 typedef vector <int> vi;
 typedef pair< int ,int > pii;
 #define endl "\n"
-#define sd(mark) scanf("%d",&mark)
-#define ss(mark) scanf("%s",&mark)
-#define sl(mark) scanf("%lld",&mark)
-#define debug(mark) printf("check%d\n",mark)
-#define pb push_back
-#define mp make_pair
+#define sd(val) scanf("%d",&val)
+#define ss(val) scanf("%s",&val)
+#define sl(val) scanf("%lld",&val)
+#define debug(mark) printf("check%d\n",val)
+#define PB push_back
+#define MP make_pair
 #define F first
 #define S second
 #define ll long long
 #define MOD 1000000007
-#define clr(mark) memset(mark,0,sizeof(mark))
+#define clr(val) memset(val,0,sizeof(val))
 #define OJ \
     freopen("input.txt", "r", stdin); \
     freopen("output.txt", "w", stdout);
