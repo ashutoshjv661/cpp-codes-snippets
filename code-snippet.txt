@@ -10,6 +10,10 @@ using namespace std;
 typedef vector <int> vi;
 typedef pair< int ,int > pii;
 #define endl "\n"
+#define sd(mark) scanf("%d",&mark)
+#define ss(mark) scanf("%s",&mark)
+#define sl(mark) scanf("%lld",&mark)
+#define debug(mark) printf("check%d\n",mark)
 #define pb push_back
 #define mp make_pair
 #define F first
@@ -23,8 +27,8 @@ typedef pair< int ,int > pii;
 
 int main()
 {
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
+  //ios_base::sync_with_stdio(false);
+  //cin.tie(NULL);
 
 
 
