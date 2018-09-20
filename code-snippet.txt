@@ -13,7 +13,7 @@ typedef pair< int ,int > pii;
 #define sd(val) scanf("%d",&val)
 #define ss(val) scanf("%s",&val)
 #define sl(val) scanf("%lld",&val)
-#define debug(mark) printf("check%d\n",val)
+#define debug(val) printf("check%d\n",val)
 #define PB push_back
 #define MP make_pair
 #define F first
