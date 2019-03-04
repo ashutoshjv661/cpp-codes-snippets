@@ -1,7 +1,7 @@
-﻿﻿/*******************************************
+/*******************************************
  * @ashutoshjv661
- * Follow me on instagram/facebook/twitter  
-             {´◕ ◡ ◕｀}
+ *
+ *
  *******************************************/
 
 #include<bits/stdc++.h>
@@ -14,21 +14,23 @@ typedef pair< int ,int > pii;
 #define ss(val) scanf("%s",&val)
 #define sl(val) scanf("%lld",&val)
 #define debug(val) printf("check%d\n",val)
+#define all(v) v.begin(),v.end()
 #define PB push_back
 #define MP make_pair
-#define F first
-#define S second
+#define FF first
+#define SS second
 #define ll long long
 #define MOD 1000000007
 #define clr(val) memset(val,0,sizeof(val))
 #define OJ \
     freopen("input.txt", "r", stdin); \
     freopen("output.txt", "w", stdout);
+#define FIO ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
 
-int main()
+
+int main() 
 {
-  //ios_base::sync_with_stdio(false);
-  //cin.tie(NULL);
+ 
 
 
 
