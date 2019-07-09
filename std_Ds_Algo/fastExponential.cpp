@@ -1,11 +1,4 @@
 /* @ashutoshjv661 Ashutosh Jadhav */
-#include<bits/stdc++.h>
-using namespace std;
-
-#define endl "\n"
-#define ll long long
-#define OJ freopen("input.txt", "r", stdin); freopen("output.txt", "w", stdout);
-#define FIO ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
 
 ll fastexpo(ll a,ll n){
@@ -18,16 +11,46 @@ ll fastexpo(ll a,ll n){
 		else return r*r*a;
 	}
 }
-int main() 
-{
-	FIO;
-	OJ;
- 	ll n,p;
- 	cin>>n>>p;
- 	cout<<fastexpo(n,p);
 
-
-
-
-	return 0;
+ll power(ll x, ll y){
+    ll res = 1;
+    while (y > 0){
+        if (y & 1)
+            res = res*x;
+        y = y>>1;
+        x = x*x;
+    }
+    return res;
 }
+ 
+
+
+ll power(ll x,ll y,ll p)
+{
+  ll res=1;
+  x=x%p;
+  while(y>0)
+  {
+    if(y&1)
+      res=(res*x)%p;
+    y=y>>1;
+    x=(x*x)%p;
+  }
+  return res;
+}
+
+ll mpower(ll x, ll y, ll p){
+    ll res = 1;
+    x = x % p;
+    while (y > 0)
+    {
+        if (y & 1){
+            res = (res*x) % p;
+        }
+        y = y>>1;
+        x = (x*x) % p;
+    }
+    return res;
+}
+ 
+
