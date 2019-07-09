@@ -12,6 +12,17 @@ ll fastexpo(ll a,ll n){
 	}
 }
 
+ll fastmodpower(ll a,ll n, ll m){
+  if(n==0)return 1;
+  else{
+    ll r=fastmodpower(a,n/2,m);
+    if(n%2==0){
+      return (r*r)%m;
+    }
+    else return (r*r*a)%m;
+  }
+}
+
 ll power(ll x, ll y){
     ll res = 1;
     while (y > 0){
@@ -53,4 +64,15 @@ ll mpower(ll x, ll y, ll p){
     return res;
 }
  
+#define MOD 1000000007
 
+// iterative method
+ll fast_exp(int base, int exp) {
+    ll res=1;
+    while(exp>0) {
+       if(exp%2==1) res=(res*base)%MOD;
+       base=(base*base)%MOD;
+       exp/=2;
+    }
+    return res%MOD;
+}
