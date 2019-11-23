@@ -13,3 +13,15 @@ bool coprime(ll a, ll b)
     return (__gcd(a, b) == 1);
 }
  
+//coding blocks code 
+// Root N method
+isprime(ll n){
+    if(n==2)return 1;
+    if(n==1 or n%2==0){
+        return 0;
+    }
+    for(ll i=3;i*i<=n;i+=2){
+        if(n%i==0)return 0;
+    }
+    return 1;
+}
