@@ -8,7 +8,7 @@ void prime_seive(int * p,int n){
     p[0]=p[1]= 0;
     p[2]=1;
     // first optimisation is that iterate only over the odd numbers
-    for(int i=3;i*i<=n;i+=2){
+    for(int i=3;i<=n;i+=2){
         if(p[i]){
             // 2nd optimisation is that we are starting from i^2 to check for next non-prime 
             for(int j=i*i;j<=n;j+=2*i){ // another optimisation is that we are doing j+= 2i because we are skipping even number 

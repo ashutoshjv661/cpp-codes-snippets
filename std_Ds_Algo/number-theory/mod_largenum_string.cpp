@@ -18,4 +18,6 @@ int main()
 	string num = "12316767678678"; 
 	cout << mod(num, 10); 
 	return 0; 
-} 
+}  
+
+

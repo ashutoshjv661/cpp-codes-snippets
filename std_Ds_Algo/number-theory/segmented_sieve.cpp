@@ -32,7 +32,7 @@ for(int i=3;i<MAX;i+=2){
 return primes;
 
 }
-void printPrimes(long long l,long long r,vector<int> primes){
+void printPrimes(long long l,long long r,vector<int>& primes){
     bool isPrime[r-l+1];
     // 0th index lth index nth index is rth index 
     for(int i=0;i<=r-l;i++){
@@ -62,7 +62,7 @@ void printPrimes(long long l,long long r,vector<int> primes){
     }
 }
 int main(){
-    vector<int>primes = sieve();
+    vector<int> primes = sieve();
     int t;
     cin>>t;
     while(t--){
