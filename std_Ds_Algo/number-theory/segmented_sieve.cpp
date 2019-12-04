@@ -71,3 +71,65 @@ int main(){
         printPrimes(l,r,primes);
     }
 }
+
+// the above logic is little difficult so below one is good ^__^
+// I understood the above one it is quite simple follow both 
+// coding blocks solution 
+
+#include <bits/stdc++.h>
+#define ll long long 
+using namespace std;
+int p[1000001];
+
+void prime(){
+    fill(p,p+1000001,1);
+    for(int i=2;i*i<=1000000;i++){
+        for(int j=2*i;j<=1000000;j+=i)
+        p[j]=0;
+    }
+}
+
+void calculate_ans(int a,ll b){
+    
+    int pp[b-a+1];
+    fill(pp,pp+b-a+1,1); // start end fill_value 
+    
+    for(int i=2;i*i<=b;i++){   // because we can find all factors before sqrt of b 
+        if(p[i]){
+            for(int j=a;j<=b;j++){
+                if(j%i==0   && j!=i){  // j!=i because if j==i overlap then we will loose that prime 
+                    pp[j-a]=0; // because we hace relative indexing therefore j-a =0;
+                }
+            }
+        }
+    }
+    if(a!=1) // to check we are not starting from 1 
+    for(ll i=a;i<=b;i++){
+        if(pp[i-a]){
+            cout<<i<<endl;
+        }
+    }
+    else{
+        for(ll i=2;i<=b;i++){
+        if(pp[i-a]){
+            cout<<i<<endl;
+        }
+    }
+    }
+    cout<<endl;
+
+}
+
+
+int main() {
+    int t;
+    cin>>t;
+    prime();
+    while(t--){
+        int n;
+        cin>>n;
+        ll m;
+        cin>>m;
+        calculate_ans(n,m);
+    }
+}

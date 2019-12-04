@@ -8,7 +8,7 @@ void prime_seive(int * p,int n){
     p[0]=p[1]= 0;
     p[2]=1;
     // first optimisation is that iterate only over the odd numbers
-    for(int i=3;i<=n;i+=2){
+    for(int i=3;i*i<=n;i+=2){
         if(p[i]){
             // 2nd optimisation is that we are starting from i^2 to check for next non-prime 
             for(int j=i*i;j<=n;j+=2*i){ // another optimisation is that we are doing j+= 2i because we are skipping even number 
@@ -24,5 +24,10 @@ int main(){
     int N=1000000;
     int p[N];
     memset(p,0,sizeof(p));
-    prime_seive(p,10);
+    prime_seive(p,10000);
+    int count=0;
+    for(int i=0;i<=10000;i++){
+        if(p[i])count++;
+    }
+    cout<<count<<"\n";
 }
