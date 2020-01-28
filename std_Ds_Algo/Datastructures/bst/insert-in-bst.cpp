@@ -14,26 +14,37 @@ struct Node
     int data;
     Node* left;
     Node* right;
+    Node (int data){
+        data = data;
+        left = NULL;
+        right = NULL;
+    }
 };
-void reversePrint(Node *root)
+
+
+Node* insert(Node* node, int data)
 {
-    stack<Node*> n;
-    queue<Node*> q;
-    q.push(root);
-    while(!q.empty()){
-        Node* d=q.front();
-        n.push(d);
-        q.pop();
-        if(d->right){
-            q.push(d->right);
-        }
-        if(d->left){
-            q.push(d->left);
-        }
+    Node* n = new Node(data);
+    if(node == NULL ){
+        return n;
     }
-    while(!n.empty()){
-        Node* k=n.top();
-        cout<<k->data<<" ";
-        n.pop();
+    Node* parent;
+    Node* cur;
+    cur = node;
+    while(cur!=NULL){
+        parent = cur;
+        if(cur->data == data ){
+            return node;
+        }
+        if(cur->data< data){
+            cur = cur->right;
+        }
+        else cur = cur ->left;
     }
+    if(parent->data < data){
+        parent->right = n;
+    }else{
+        parent->left = n;
+    }
+    return node;
 }
