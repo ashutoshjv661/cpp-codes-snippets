@@ -21,7 +21,10 @@ ll modInv(ll a, ll m){
     ll res = (x%m + m) % m;
     return res%m;
 }
- 
+
+ll gcd(ll a,ll b){
+    return a==0?b:gcd(b%a,a);
+}
 ll gcdExtended(ll a, ll b, ll *x, ll *y){
     if (a == 0){
         *x = 0, *y = 1;      
