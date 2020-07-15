@@ -9,32 +9,31 @@ so that we can create a array of 10^6 and use segmented sieve
 #include<bits/stdc++.h>
 using namespace std;
 // Coding ninjas solution
-#define MAX 100001
+
+#define MAX 100001 //assumed max value of root R
+
 vector<int>sieve(){
     bool isPrime[MAX];
     for(int i=0;i<MAX;i++)isPrime[i]=1;
-
-for(int i=2;i*i<MAX;i++){
-    if(isPrime[i]){
-        for(int j=i*i;j<MAX;j+=i){
-            isPrime[j]=false;
+    for(int i=2;i*i<MAX;i++){
+        if(isPrime[i]){
+            for(int j=i*i;j<MAX;j+=i){
+                isPrime[j]=false;
+            }
+        }
+    } 
+    vector<int> primes;
+    primes.push_back(2);
+    for(int i=3;i<MAX;i+=2){
+        if(isPrime[i]){
+            primes.push_back(i);
         }
     }
-}
-
-vector<int> primes;
-primes.push_back(2);
-for(int i=3;i<MAX;i+=2){
-    if(isPrime[i]){
-        primes.push_back(i);
-    }
-}
-return primes;
-
+    return primes;
 }
 void printPrimes(long long l,long long r,vector<int>& primes){
     bool isPrime[r-l+1];
-    // 0th index lth index nth index is rth index 
+    // 0th index lth index ---- nth index is rth index 
     for(int i=0;i<=r-l;i++){
         isPrime[i]=true;
     }
@@ -71,6 +70,21 @@ int main(){
         printPrimes(l,r,primes);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // the above logic is little difficult so below one is good ^__^
 // I understood the above one it is quite simple follow both 
