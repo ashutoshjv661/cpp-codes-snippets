@@ -1,24 +1,16 @@
-// Sqrt(x), https://leetcode.com/explore/learn/card/binary-search/125/template-i/950/
-/*
-int f() {
-	int left = 0, right = n - 1;
-    int ans = -1;
-	while(left <= right) {
-		int mid = left + (right - left) / 2;
-		if(property(mid)) {
-			ans = mid;
-            right = mid - 1; // if we're looking for the first (leftmost element)
-		}
-		else {
-			left = mid + 1;
-		}
-	}
-	return ans;
-}
-*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define endl "\n"
+#define ll long long
+#define what_is(x) cerr << #x << " is " << x << endl; 
+#define OJ \
+    freopen("input.txt", "r", stdin); \
+    freopen("output.txt", "w", stdout);
+#define FIO ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
 
 // Find the last number M that M*M <= x.
-
 class Solution {
 public:
     int mySqrt(int x) {
@@ -37,3 +29,11 @@ public:
         return ans;
     }
 };
+
+int main() 
+{
+ Solution s;
+ int ans = s.mySqrt(50);
+ cout<<ans<<endl;
+ return 0;
+}
