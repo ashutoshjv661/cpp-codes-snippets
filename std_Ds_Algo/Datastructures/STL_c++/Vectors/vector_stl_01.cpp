@@ -29,7 +29,7 @@ int main() {
     cout << endl;
 
     //Discuss more functions
-    vector<int> v;
+    v.clear();
     int n;
     cin >> n;
     for (int i = 0; i < n; i++) {
