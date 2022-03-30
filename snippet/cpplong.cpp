@@ -46,7 +46,7 @@ void dbgall(Head H, Tail... T) { cout << ' ' << H; dbgall(T...); }
 #define pii pair<int, int>
 #define pll pair<ll, ll>
 #define all(arr) arr.begin(), arr.end()
-#define search(mp, n) !!(mp.find(n) != mp.end())
+#define search(con, n) !!(con.find(n) != con.end())
 #define rep(i, a, b)  for (ll i = a; i < b; i++)
 #define iter(it, con)  for (auto it=con.begin(); it!=con.end(); it++)
 #define clr(x) memset(x,0,sizeof(x))
@@ -71,6 +71,6 @@ signed main() {
 	}
 	
 	clock_t p_end = clock();
-	cerr << "Time : " << (double)(p_end - p_start) / (double)CLOCKS_PER_SEC << " sec  ";
+	cerr << "\n\nTime : " << fixed << setprecision(6) << (double)(p_end - p_start) / (double)CLOCKS_PER_SEC << " sec  ";
 	return 0;
 }
